@@ -1,0 +1,21 @@
+server:
+  port: 8080
+  servlet:
+    context-path: /identity
+
+spring:
+  datasource:
+    url: jdbc:sqlserver://localhost:1433;databaseName=TestDB;encrypt=false
+    username: sa
+    password: Welcome!123
+    driver-class-name: com.microsoft.sqlserver.jdbc.SQLServerDriver
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+  show-sql: true
+
+jwt:
+  secretKey: "HK8A4g4T3q!SQs=6S?F6R5XmuDzbYzVH"
+  expiration-time: 3600 # 1 hour
+  refreshable-time: 36000 # 10 hours
