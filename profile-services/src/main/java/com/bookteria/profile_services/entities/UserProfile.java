@@ -26,8 +26,8 @@ public class UserProfile {
     String userId;
 
     String username;
-    String firstName;
-    String lastName;
+    String firstname;
+    String lastname;
     LocalDate birthday;
     String city;
 }

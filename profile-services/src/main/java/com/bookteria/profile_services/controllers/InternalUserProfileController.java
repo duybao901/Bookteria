@@ -8,15 +8,15 @@ import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/profile")
-public class UserProfileController {
+public class InternalUserProfileController {
     private final UserProfileServices _userProfileService;
 
-    public UserProfileController(UserProfileServices userProfileServices){
+    public InternalUserProfileController(UserProfileServices userProfileServices){
         this._userProfileService = userProfileServices;
     }
 
-    @GetMapping("/users/{profileId}")
-    Result<UserProfileResponse> getProfile(@PathVariable String profileId){
-        return Result.success(_userProfileService.getProfile(profileId));
+    @PostMapping("/internal/users")
+    Result<UserProfileResponse> createProfile(@RequestBody UserProfileCreationRequest request) {
+        return Result.success(_userProfileService.createProfile(request));
     }
 }
