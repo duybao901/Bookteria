@@ -13,7 +13,7 @@ import java.time.LocalDate;
 @NoArgsConstructor
 @FieldDefaults(level = AccessLevel.PRIVATE)
 public class UserCreationRequest {
-    @Size(min = 6, message = "Username must be at least {min} character")
+    @Size(min = 4, message = "Username must be at least {min} character")
     String username;
 
     @Size(min = 6, message = "Password must be at least {min} character")
@@ -21,4 +21,6 @@ public class UserCreationRequest {
 
     @DobConstraint(minAge = 20, message = "your age must be at least {minAge}")
     LocalDate birthday;
+
+    String city;
 }

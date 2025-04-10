@@ -3,14 +3,16 @@ package com.bookteria.profile_services.dto.response;
 import lombok.*;
 import lombok.experimental.FieldDefaults;
 
+import java.time.LocalDate;
+
 @Data
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
 @FieldDefaults(level = AccessLevel.PRIVATE)
 public class UserProfileResponse {
-    String firstName;
-    String lastName;
-    String dob;
+    String userId;
+    String username;
+    LocalDate birthday;
     String city;
 }

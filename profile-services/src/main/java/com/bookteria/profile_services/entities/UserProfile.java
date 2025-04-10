@@ -8,6 +8,8 @@ import org.springframework.data.neo4j.core.schema.Node;
 import org.springframework.data.neo4j.core.schema.Property;
 import org.springframework.data.neo4j.core.support.UUIDStringGenerator;
 
+import java.time.LocalDate;
+
 @Node("user_profile")
 @Setter
 @Getter
@@ -23,8 +25,9 @@ public class UserProfile {
     @Property("userId")
     String userId;
 
+    String username;
     String firstName;
     String lastName;
-    String dob;
+    LocalDate birthday;
     String city;
 }

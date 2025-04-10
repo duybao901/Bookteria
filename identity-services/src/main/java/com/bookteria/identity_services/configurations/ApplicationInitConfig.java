@@ -31,7 +31,7 @@ public class ApplicationInitConfig {
                 user.setPassword(passwordEncoder.encode("admin"));
                 user.setBirthday(LocalDate.parse("1989-02-03"));
 
-                Set<Role> roles = new HashSet<>();
+                HashSet<Role> roles = new HashSet<>();
                 roles.add(role);
 
                 user.setRoles(roles);

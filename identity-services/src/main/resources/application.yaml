@@ -19,3 +19,20 @@ jwt:
   secretKey: "HK8A4g4T3q!SQs=6S?F6R5XmuDzbYzVH"
   expiration-time: 3600 # 1 hour
   refreshable-time: 36000 # 10 hours
+
+app:
+  services:
+    profile: "http://localhost:8082/profile"
+
+logging:
+  level:
+    com.example.feignclient: DEBUG  # thay bằng package của bạn
+    feign: DEBUG
+    okhttp3: DEBUG
+    httpclient.wire: DEBUG
+
+feign:
+  client:
+    config:
+      default:
+        loggerLevel: FULL
